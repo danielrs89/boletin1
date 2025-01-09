@@ -1,28 +1,43 @@
 import java.util.Scanner;
 
 public class VariablesCondiciones {
+    public static Scanner entradaEscaner = new Scanner(System.in);
 
-    public static void coeficientes(){
-        Scanner entradaEscaner = new Scanner(System.in);
-        double a,b,c;
-        double x1,x2,d;
+    //1. Pedir los coeficientes de una ecuación se 2º grado, y muestre sus soluciones reales. Si no existen, debe indicarlo.
+    public static void coeficientes(double a,double b,double c) {
+
+//        double a, b, c;
+        double x1, x2, d;
 
         System.out.println("Introduce el coeficiente a:");
-        a=entradaEscaner.nextDouble();
+        a = Main.entradaEscaner.nextDouble();
         System.out.println("Introduce el coeficiente b:");
-        b=entradaEscaner.nextDouble();
+        b = Main.entradaEscaner.nextDouble();
         System.out.println("Introduce el coeficiente c:");
-        c=entradaEscaner.nextDouble();
+        c = Main.entradaEscaner.nextDouble();
 
         //calcula determinante
-        d = ((b*b)-4*a*c);
-        if (d<0) System.out.println("No existen soluciones reales");
+        d = ((b * b) - 4 * a * c);
+        if (d < 0) System.out.println("No existen soluciones reales");
         else {
             // si a es un division por cero
-            x1 = (-b+Math.sqrt(d))/(2*a);
-            x2 = (-b-Math.sqrt(d))/(2*a);
-            System.out.println("solución: "+x1);
-            System.out.println("solución: "+x2);
+            x1 = (-b + Math.sqrt(d)) / (2 * a);
+            x2 = (-b - Math.sqrt(d)) / (2 * a);
+            System.out.println("solución: " + x1);
+            System.out.println("solución: " + x2);
         }
     }
+
+    // 2. Pedir el radio de un círculo y calcular su área. A=PI*r^2.
+    public static void radioCirculo(double r) {
+        double a;
+
+        System.out.println("introduce el radio");
+        r = Main.entradaEscaner.nextDouble();
+
+        a = Math.PI * (r * r);
+
+        System.out.println("El área del circulo con radio " + r + " es: " + a);
+    }
+
 }
