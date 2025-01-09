@@ -25,7 +25,4 @@ public class VariablesCondiciones {
             System.out.println("solución: "+x2);
         }
     }
-
-
-
 }
