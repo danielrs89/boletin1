@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class VariablesCondiciones {
@@ -72,4 +74,122 @@ public class VariablesCondiciones {
         if (a >= 0) return "Es positivo";
         else return "Es negativo";
     }
+
+    // 6. Número múltiplos
+    public static String numerosMultiplos(int n1, int n2) {
+
+        System.out.print("Introfuce un número: ");
+        n1 = entradaEscaner.nextInt();
+        System.out.print("Introfuce un número: ");
+        n2 = entradaEscaner.nextInt();
+
+        return n1 % n2 == 0 ? "Son múltiplos" : "No son múltiplos";
+    }
+
+    //22. Pedir un número de 0 a 99 y mostrarlo escrito.
+    public static String cifrasLetras(int n1) {
+        int unidad, decena;
+        boolean completo;
+        // false hasta que no se imprima el número
+        completo = false;
+
+        try {
+
+            // comprobar que el numero de entrada esta dentro del rango
+            System.out.println("Meter un número entre el 0 y 99");
+            n1 = entradaEscaner.nextInt();
+
+            // excepciondes
+            if (n1 == 11 || n1 == 12) {
+
+                completo = true;
+                if (n1 == 11) System.out.println("Once");
+                if (n1 == 12) System.out.println("Once");
+            }
+
+            while (n1 > 99 || n1 < 0 && !completo) {
+                System.out.println("El número no es correcto!!!");
+                System.out.println("Meter un número entre el 0 y 99");
+                n1 = entradaEscaner.nextInt();
+            }
+
+            if (!completo){
+                // obtener unidades
+                unidad = n1 % 10;
+                decena = n1 / 10;
+
+                switch (decena){
+                    case 0:
+                        break;
+                    case 1:
+                        System.out.print("Diez ");
+                        break;
+                    case 2:
+                        System.out.print("Veinti ");
+                        break;
+                    case 3:
+                        System.out.print("Treinta ");
+                        break;
+                    case 4:
+                        System.out.print("Cuarenta ");
+                        break;
+                    case 5:
+                        System.out.print("Cincuenta ");
+                        break;
+                    case 6:
+                        System.out.print("Sesenta ");
+                        break;
+                    case 7:
+                        System.out.print("Setenta ");
+                        break;
+                    case 8:
+                        System.out.print("Ochenta ");
+                        break;
+                    case 9:
+                        System.out.print("Noventa ");
+                        break;
+                }
+                switch (unidad){
+                    case 0:
+                        System.out.print("Cero");
+                        break;
+                    case 1:
+                        System.out.print("Uno");
+                        break;
+                    case 2:
+                        System.out.print("Dos");
+                        break;
+                    case 3:
+                        System.out.print("Tres");
+                        break;
+                    case 4:
+                        System.out.print("Cuatro");
+                        break;
+                    case 5:
+                        System.out.print("Cinco");
+                        break;
+                    case 6:
+                        System.out.print("Seis");
+                        break;
+                    case 7:
+                        System.out.print("Siete");
+                        break;
+                    case 8:
+                        System.out.print("Ocho");
+                        break;
+                    case 9:
+                        System.out.print("Nueve");
+                        break;
+                }
+
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
+        return "";
+    }
+
 }
