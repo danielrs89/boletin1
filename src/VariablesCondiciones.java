@@ -29,7 +29,7 @@ public class VariablesCondiciones {
     }
 
     // 2. Pedir el radio de un círculo y calcular su área. A=PI*r^2.
-    public static void radioCirculo(double r) {
+    public static void areaCirculo(double r) {
         double a;
 
         System.out.println("introduce el radio");
@@ -40,4 +40,14 @@ public class VariablesCondiciones {
         System.out.println("El área del circulo con radio " + r + " es: " + a);
     }
 
+//    3. Pedir el radio de una circunferencia y calcular su longitud.
+    public static double longitudCirculo(double r){
+        double l;
+        System.out.print("Introduce el radio círculo: ");
+        r = entradaEscaner.nextDouble();
+        l = 2*Math.PI*r;
+
+        return l;
+
+    }
 }

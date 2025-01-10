@@ -6,7 +6,11 @@ public class Main {
     public static void main(String[] args) {
 
 //        VariablesCondiciones.coeficientes(a,b,c);//1. Ecuación de segundo grado
-        VariablesCondiciones.radioCirculo(r);// 2. Calcular área círculo.
+//        VariablesCondiciones.areaCirculo(r);// 2. Calcular área círculo.
+        System.out.println("La longitud es: "+VariablesCondiciones.longitudCirculo(r)); // 3. Calcular longitud círculo.
+
+
+
     }
 
 }
