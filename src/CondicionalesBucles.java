@@ -2,36 +2,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CondicionalesBucles {
-    // pedir numero hasta decir 0
-    public static ArrayList<Integer> cadenaNumeros() {
-        ArrayList<Integer> numeros = new ArrayList<>();
-        int numero;
+    private static int puntuacion, aleatorio, usuario;
+    private static String respuestaReinicio;
+    private static ArrayList<Integer> utilizados= new ArrayList<>();;
 
-        System.out.println("Introduce un número. Cero para salir.");
-        numero = Main.entradaEscaner.nextInt();
-
-
-        while (numero != 0) {
-            numeros.add(numero);
-            System.out.println("Introduce un número. Cero para salir.");
-            numero = Main.entradaEscaner.nextInt();
-        }
-
-        return numeros;
-
-    }
 
     // juego de adivinar el numero
     public static void adivina() {
-         int aleatorio, usuario, puntuacion;
-        String respuestaReinicio;
-        boolean reiniciarJuego;
 
-        ArrayList<Integer> utilizados = new ArrayList<>();
+
+
         aleatorio = (int) ((Math.random() * 100) + 1);
         puntuacion = 10;
-        reiniciarJuego =false;
 
+        logicaJuego();
+
+    }
+
+    public static void logicaJuego(){
         //        comienza el juego pidiendo un número
         System.out.println("Hola mi nombre es Junlia, ¿Quieres adivinar el número que estoy pensando?.\nTienes 10 intentos.\nIntroduce un número entre el 1 y 100: ");
         usuario = Main.entradaEscaner.nextInt();
@@ -49,9 +37,16 @@ public class CondicionalesBucles {
             // imprime informacion
             System.out.println("NUMEROS UTILIZADOS: ");
             for (int n : utilizados){
-                System.out.println("* "+n);
+                System.out.print(" - "+n);
             }
-            System.out.println("--------------------");
+
+            if (puntuacion!=0){
+
+            }else {
+                System.out.println("\"  --------------------\\n------------------- Lo siento has perdido!!! -------------------\\n  --------------------\\nHasta pronto.");
+                System.exit(0);
+            }
+            System.out.println("\n--------------------");
             System.out.println("Te quedan "+puntuacion+" intentos");
             System.out.println("--------------------");
 
@@ -61,16 +56,16 @@ public class CondicionalesBucles {
         }
 
 
-        System.out.println("Enorabuena has ganado!!!\n¿Quieres jugar otra vez? (SI/NO)");
+        System.out.println("--------------------\n------------------- Enorabuena has ganado!!! -------------------\n--------------------\n¿Quieres jugar otra vez? (SI/NO)");
         respuestaReinicio = Main.entradaEscaner.next();
-        if (respuestaReinicio.toLowerCase() == "si") adivina();
+        if (respuestaReinicio.equalsIgnoreCase("si")) {
+            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            adivina();
+        }
         else {
             System.out.println("Hasta pronto.");
             System.exit(0);
         }
-
     }
-    public static void logicaJuego(){
 
-    }
 }

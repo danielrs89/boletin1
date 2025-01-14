@@ -23,7 +23,12 @@ public class Main {
 
 
         // juego Junlia adiva el númeno
-        CondicionalesBucles.adivina();
+        try {
+            CondicionalesBucles.adivina();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 
