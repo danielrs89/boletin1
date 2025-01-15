@@ -17,23 +17,15 @@ public class Main {
 
         // PARTE 2 - CondicionalesBucles
         // juego Junlia adiva el númeno
-        try {
-            CondicionalesBucles.adivina();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            CondicionalesBucles.adivina();
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
 
         // PARTE 3 - BuclesAnidados
-//        int tabla,i;
-//        for (tabla=1; tabla<=10; tabla++)
-//        {
-//            System.out.println ("\n\nTabla del " +tabla);
-//            System.out.println ("---------------");
-//            for (i=1;i<=10;i++)
-//            {
-//                System.out.println (tabla + " x " + i + " = " + tabla*i);
-//            }
-//        }
+        BuclesAnidados.contador();
+        //
     }
 
 
