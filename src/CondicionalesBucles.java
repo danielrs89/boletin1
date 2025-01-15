@@ -9,6 +9,7 @@ public class CondicionalesBucles {
     public static void adivina() {
         aleatorio = (int) ((Math.random() * 100) + 1);
         puntuacion = 10;
+        utilizados.clear();
 
         logicaJuego();
     }
@@ -44,14 +45,12 @@ public class CondicionalesBucles {
                 System.out.println("Introduce un número entre el 1 y 100: ");
                 usuario = Main.entradaEscaner.nextInt();
             } else {
-                System.out.println("\"  --------------------\\n------------------- Lo siento has perdido!!! -------------------\\n  --------------------\\nHasta pronto.");
+                System.out.println("\n------------------- Lo siento has perdido!!! --------------------\nHasta pronto.");
                 System.exit(0);
             }
-
         }
 
-
-        System.out.println("--------------------\n------------------- Enorabuena has ganado!!! -------------------\n--------------------\n¿Quieres jugar otra vez? (SI/NO)");
+        System.out.println("------------------- Enorabuena has ganado!!! -------------------\n¿Quieres jugar otra vez? (SI/NO)");
         respuestaReinicio = Main.entradaEscaner.next();
         if (respuestaReinicio.equalsIgnoreCase("si")) {
             System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
