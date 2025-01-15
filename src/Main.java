@@ -24,8 +24,17 @@ public class Main {
 //        }
 
         // PARTE 3 - BuclesAnidados
-        BuclesAnidados.contador();
+        //BuclesAnidados.contador();
         //
+
+
+//        PARTE 4 - TABLAS
+          Tablas.gestionarNotas();
+
+
+
+
+        
     }
 
 
