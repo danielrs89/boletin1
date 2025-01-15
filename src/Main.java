@@ -6,7 +6,7 @@ public class Main {
     //private static double a,b,c,r;
     //private static int n1, n2;
     public static void main(String[] args) {
-// PARTE 1
+// PARTE 1 - VariablesCondiciones
 //        VariablesCondiciones.coeficientes(a,b,c);//1. Ecuación de segundo grado
 //        VariablesCondiciones.areaCirculo(r);// 2. Calcular área círculo.
 //        System.out.println("La longitud es: "+VariablesCondiciones.longitudCirculo(r)); // 3. Calcular longitud círculo.
@@ -15,21 +15,27 @@ public class Main {
 //        System.out.println(VariablesCondiciones.numerosMultiplos(n1,n2)); // 6. multiplos o no
 //        VariablesCondiciones.cifrasLetras(n1);
 
-        // PARTE 2
-        // pedir y almacenar un número hasta finalizar
-//        for (int numero : CondicionalesBucles.cadenaNumeros()) {
-//            System.out.print(numero + ", ");
+        // PARTE 2 - VariablesCondiciones
+        // juego Junlia adiva el númeno
+//        try {
+//            CondicionalesBucles.adivina();
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
 //        }
 
-
-        // juego Junlia adiva el númeno
-        try {
-            CondicionalesBucles.adivina();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        // PARTE 3 - BuclesAnidados
+        int tabla,i;
+        for (tabla=1; tabla<=10; tabla++)
+        {
+            System.out.println ("\n\nTabla del " +tabla);
+            System.out.println ("---------------");
+            for (i=1;i<=10;i++)
+            {
+                System.out.println (tabla + " x " + i + " = " + tabla*i);
+            }
         }
-
-
     }
 
-}
+
+        }
+
