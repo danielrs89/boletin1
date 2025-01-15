@@ -1,5 +1,5 @@
 # PART 1 - VariablesCondiciones
-    ```bs
+   ```java
     // 6. Multiples
     public static String numerosMultiplos(int n1, int n2) {
 
